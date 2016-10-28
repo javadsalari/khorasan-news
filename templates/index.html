@@ -13,7 +13,7 @@
     <title>سایت خبری خراسان جنوبی</title>
 </head>
 <body id="home">
-<direction>rtl</direction>
+
 <div id="wrapper">
 
     <!--__--__--__--__--__--  L O G O  &   N A V    B A R --__--___--__--__--__-->
@@ -49,83 +49,49 @@
         <div id="line" style="margin-left: 0; text-align: center;">
             <div class="dline"></div>
 
+            <h1>اخبار استان</h1>
+
+            <div class="dline"></div>
+        </div>
+        <div id="ourserv">
+            {% for i in data_ostan %}
+            <article>
+                <h1>{{ i[u'title'] }}</h1>
+                <img class="img_" src="{{ i[u'image'] }}" alt=""/>
+
+                <p>{{ i[u'summary'] }}</p>
+                <a href="/news/{{i[u'id']  }}" class="rm">بیشتر</a>
+            </article>
+            {% end for %}
+
+
+        </div>
+        <div id="line" style="margin-left: 0; text-align: center;">
+            <div class="dline"></div>
+
             <h1>اخبار ایران</h1>
 
             <div class="dline"></div>
         </div>
         <div id="ourserv">
+            {% for i in data_iran %}
             <article>
-                <h1>سیاسی</h1>
-                <img src="/static/images/3.jpg" alt=""/>
+                <h1>{{ i[u'title'] }}</h1>
+                <img class="img_" src="{{ i[u'image'] }}" alt=""/>
 
-                <p>فرمانده کل سپاه پاسداران گفت: وضعیت ایران امروز به گونه‌ای است که حتی کشورهای دیگر برای تعیین سرنوشت سوریه اعتراف می‌کنند که باید با ایران مذاکره کنند.</p>
-                <a href="fullwidth.html" class="rm">بیشتر</a>
+                <p>{{ i[u'summary'] }}</p>
+                <a href="/news/{{ i[u'id'] }}" class="rm">بیشتر</a>
             </article>
-            <article>
-                <h1>اقتصادی</h1>
-                <img src="/static/images/2.jpg" alt=""/>
+            {% end for %}
 
-                <p>معاون رئیس جمهوری و رئیس سازمان امور اداری و استخدامی کشور با اشاره به اینکه امسال اخرین سال دوره
-                    ازمایشی قانون خدمات مدیریت کشوری است گفت:</p>
-                <a href="fullwidth.html" class="rm">بیشتر</a>
-            </article>
-            <article class="lastarticle">
-                <h1>حوادث</h1>
-                <img src="/static/images/1.jpg" alt=""/>
 
-                <p> لئوپولد دوم در طول 23 سال حکومتش (1908 – 1885) نزدیک به 10 میلیون آفریقایی قتل عام کرد: قطع عضو،
-                    عقیم کردن، گرسنگی دادن با کار اجباری، شلاق زدن تا سر حد مرگ،</p>
-                <a style="text-align: center" href="fullwidth.html" class="rm">بیشتر</a>
-            </article>
         </div>
-        <div id="sline" style="text-align: center;margin-left: 0;">
-            <div class="sdline"></div>
-            <h1>اخبار استان</h1>
 
-            <div class="sdline"></div>
-        </div>
-        <div id="latestp">
-            <article>
-                <h1>سیاسی</h1>
-                <img src="/static/images/1s.jpg" alt=""/>
 
-                <p>به گزارش افکارنیوز، غلامرضا کاتب عضو هیئت‌رئیسه مجلس شورای اسلامی با بیان اینکه احتمالاً هفته آینده
-                    رئیس‌جمهور جایگزین وزرای مستعفی را به مجلس معرفی می‌کند، گفت: برای وزارت ورزش </p>
-                <a href="singlepost.html" class="rm">بیشتر</a>
-            </article>
-            <article>
-                <h1>اجتماعی</h1>
-                <img src="/static/images/2s.jpg" alt=""/>
-
-                <p>علی باقرزاده رئیس سازمان نهضت سواد آموزی در گفت و گو با خبر نگار گروه جامعه خبرگزاری میزان اظهار
-                    داشت:طبق آمار در سال 90 سه میلیون و 456 هزار نفر از افراد در گروه سنی </p>
-                <a href="singlepost.html" class="rm">بیشتر</a>
-            </article>
-            <article>
-                <h1>فرهنگی و ورزشی</h1>
-                <img src="/static/images/3s.jpg" alt=""/>
-
-                <p>
-                    به گزارش خبرگزاری صدا و سیما مرکز خراسان جنوبی، مسابقات قرآنی مدها متان دو بخش شفاهی و کتبی دارد که
-                    بخش شفاهی آن از امروز با حضور 169 خانم و آقا ازخراسان جنوبی آغاز شد.
-                </p>
-                <a href="singlepost.html" class="rm">بیشتر</a>
-            </article>
-            <article class="lastarticle">
-                <h1>حوادث</h1>
-                <img src="/static/images/4s.jpg" alt=""/>
-
-                <p>زمین لرزه‌ای به بزرگی 6.6 ریشتر غرب ژاپن را به لرزه درآورد.
-
-                    به گزارش ایسنا، بنابر اعلام سازمان هواشناسی ژاپن زمین لرزه‌ای به بزرگی 6.6 ریشتر غرب این کشور را
-                    لرزاند، اما احتمال خطر وقوع سونامی وجود ندارد.</p>
-                <a href="singlepost.html" class="rm">بیشتر</a>
-            </article>
-        </div>
     </section>
     <!--__--__--__--__--  T H E    F O O T E R --__--__--__--___--__--__--__-->
     <footer>
-        <p>تمامی حقوق این سایت متعلق به پایگاه خبری خراسان جنوبی است
+        <p>تمامی حقوق این سایت متعلق به پایگاه خبری خراسان جنوبی است</p>
     </footer>
 </div>
 </body>

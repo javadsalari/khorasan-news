@@ -5,6 +5,9 @@ import tornado.options
 import tornado.web
 from tornado.options import define, options
 from urls import urlList
+from config import Config
+
+sh_connection = Config()
 
 define("port", default=8090, help="run on the given port", type=int)
 
